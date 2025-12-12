@@ -1,9 +1,9 @@
-;;; info.el --- Private package metadata -*- lexical-binding: t -*-
+;;; meta.el --- Private package metadata -*- lexical-binding: t -*-
 
-(defvar private-pkg-info
+(definfo private-pkg-info
   (list :license 'MIT
         :collection "private"
-        :version "0.1"
-        :pkg-desc "Private package"
-        :deps '("info"))
+        :pkg-desc "User private package"
+        :deps '("meta"))
   "Metadata for the `private' collection system.")
+(meta-export (private info))

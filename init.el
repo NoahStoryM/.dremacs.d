@@ -1,3 +1,6 @@
 ;;; init.el --- User initialization file -*- lexical-binding: t -*-
 
-(info-import (private))
+(let ((scope-path (file-name-concat user-dremacs-directory "pkgs")))
+  (meta-install-scope "user" scope-path))
+
+(meta-import (private))
