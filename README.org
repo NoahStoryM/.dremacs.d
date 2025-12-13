@@ -4,14 +4,9 @@
 * Install
 You can use my configuration by two steps:
 
-** .dremacs.d
-#+begin_src sh
-git clone https://github.com/NoahStoryM/.dremacs.d ~/.dremacs.d
-#+end_src
-
-** .emacs.d
 #+begin_src sh
 git clone https://github.com/NoahStoryM/dremacs ~/.emacs.d
+git clone https://github.com/NoahStoryM/.dremacs.d ~/.dremacs.d
 #+end_src
 
 * ꧁༺๑ ͜҉๑҉Ƹ̵̡̄Ӝ̵̨̄Ʒ҉๑҉͜ ๑༻꧂
