@@ -6,4 +6,3 @@
         :pkg-desc "User private package"
         :deps '("meta"))
   "Metadata for the `private' collection system.")
-(meta-export (private info))
