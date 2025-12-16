@@ -1,5 +1,5 @@
-;;; main.el --- Private package entry -*- lexical-binding: t -*-
+;; -*- lexical-binding: t -*-
 
-(meta-import (private config))
+(meta-import (private packages))
 
 (meta-export (private))
