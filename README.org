@@ -11,3 +11,12 @@ git clone https://github.com/NoahStoryM/.dremacs.d ~/.dremacs.d
 
 * ꧁༺๑ ͜҉๑҉Ƹ̵̡̄Ӝ̵̨̄Ʒ҉๑҉͜ ๑༻꧂
 Happy Hacking!  <(~︶~)>
+
+* License
+:PROPERTIES:
+:CUSTOM_ID: license
+:END:
+
+Copyright (C) 2025 Noah Ma
+
+This project is licensed under the GPLv3 License. See the [[file:LICENSE][LICENSE]] file for details.
