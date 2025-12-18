@@ -1,11 +1,14 @@
 ;; -*- lexical-binding: t -*-
 
+(let ((theme 'spacemacs-light))
+  (spacemacs-theme-custom-colors theme)
+  (load-theme theme t))
+
 (use-package doom-modeline
-  :ensure t
   :init
   (doom-modeline-mode 1)
   :custom
   (line-number-mode t)
   (column-number-mode t))
 
-(meta-export (private packages modeline))
+(meta-export (private layers theme config))

@@ -1,16 +1,22 @@
 ;; -*- lexical-binding: t -*-
 
+(meta-import (private layers default utils))
+
 (use-package emacs
   :init
   (when (display-graphic-p)
     (context-menu-mode))
 
   :config
-  (set-face-attribute 'default nil :family "Maple Mono NL NF CN" :height #x88)
+  ;; --- Global mode Settings ---
   (blink-cursor-mode -1)
   (pixel-scroll-precision-mode)
   (cua-mode)
   (xterm-mouse-mode 1)
+
+  ;; --- Font Settings ---
+  (when (find-font (font-spec :family "Maple Mono NL NF CN"))
+    (set-face-attribute 'default nil :family "Maple Mono NL NF CN" :height 135))
 
   :custom
   ;; --- Basic Settings ---
@@ -20,14 +26,12 @@
   (sentence-end-double-space nil)
 
   ;; --- Backup Configuration ---
-  (defun private--backup-file-name (fpath)
-    "Return a new file path of a given file path.
-If the new path's directories do not exist, create them."
-    (let* ((backup-root-dir (file-name-concat private-cache-directory "emacs-backup"))
-           (file-path (replace-regexp-in-string "[A-Za-z]:" "" fpath)) ; Remove Windows driver letter
-           (backup-file-path (replace-regexp-in-string "//" "/" (concat backup-root-dir file-path "~"))))
-      (make-directory (file-name-directory backup-file-path) t)
-      backup-file-path))
+  (make-backup-files t)
+  (version-control t)
+  (backup-by-copying t)
+  (delete-old-versions t)
+  (kept-new-versions 6)
+  (kept-old-versions 2)
   (make-backup-file-name-function 'private--backup-file-name)
 
   ;; --- Minibuffer & Completion (Native UI) ---
@@ -61,9 +65,44 @@ If the new path's directories do not exist, create them."
 
   :hook
   (after-init . help-quick)
+  (text-mode . visual-line-mode))
 
-  :bind
-  ;; Make TAB in minibuffer behave like shell completion
-  (:map minibuffer-mode-map ("TAB" . minibuffer-complete)))
+(use-package autorevert
+  :config
+  (global-auto-revert-mode)
+  :custom
+  (auto-revert-avoid-polling t)
+  (auto-revert-interval 5)
+  (auto-revert-check-vc-info t))
 
-(meta-export (private packages emacs))
+(use-package savehist
+  :config
+  (savehist-mode)
+  :custom
+  (savehist-file (file-name-concat private-cache-directory "savehist")))
+
+(use-package which-key
+  :config
+  (which-key-mode))
+
+(use-package display-line-numbers
+  :custom
+  (display-line-numbers-type 'visual)
+  (display-line-numbers-width nil)
+
+  :hook
+  ((prog-mode text-mode) . display-line-numbers-mode))
+
+(use-package hl-line
+  :hook
+  ((prog-mode text-mode) . hl-line-mode))
+
+(use-package tab-bar
+  :custom
+  (tab-bar-show 1))
+
+(use-package tab-line
+  :config
+  (global-tab-line-mode))
+
+(meta-export (private layers default config))

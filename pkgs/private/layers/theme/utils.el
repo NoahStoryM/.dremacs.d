@@ -22,8 +22,4 @@
      (comment-bg    . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#262c36" "#262626") (if (true-color-p) "#fdf3dc" "#ffffff")))
      )))
 
-(let ((theme 'spacemacs-light))
-  (spacemacs-theme-custom-colors theme)
-  (load-theme theme t))
-
-(meta-export (private packages theme))
+(meta-export (private layers theme utils))

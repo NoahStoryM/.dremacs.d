@@ -2,7 +2,6 @@
 
 (use-package marginalia
   :ensure t
-  :init
-  (marginalia-mode))
+  :defer t)
 
 (meta-export (private packages marginalia))
