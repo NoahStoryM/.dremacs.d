@@ -6,7 +6,12 @@
   :custom
   (corfu-auto t)
   (corfu-cycle t)
-  (corfu-quit-no-match 'separator))
+  (corfu-quit-no-match 'separator)
+  :bind
+  (:map corfu-map
+        ("C-n" . corfu-next)
+        ("C-p" . corfu-previous)
+        ("SPC" . corfu-insert-separator)))
 
 (use-package corfu-popupinfo
   :after corfu

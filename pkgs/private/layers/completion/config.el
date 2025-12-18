@@ -23,12 +23,7 @@
 
 (use-package corfu
   :init
-  (global-corfu-mode)
-  :bind
-  (:map corfu-map
-        ;; ("C-n" . corfu-next)
-        ;; ("C-p" . corfu-previous)
-        ("SPC" . corfu-insert-separator)))
+  (global-corfu-mode))
 
 (use-package corfu-terminal
   :if (not (display-graphic-p))
