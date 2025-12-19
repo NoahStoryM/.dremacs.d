@@ -6,11 +6,6 @@
   :init
   (vertico-mode))
 
-(use-package vertico-directory
-  :bind
-  (:map vertico-map
-        ("M-DEL" . vertico-directory-delete-word)))
-
 (use-package orderless
   :custom
   (completion-styles '(orderless basic))
