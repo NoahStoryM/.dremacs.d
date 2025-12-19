@@ -5,6 +5,8 @@
              (private layers edit)
              (private layers completion)
              (private layers term)
-             (private layers git))
+             (private layers git)
+             (private layers markdown)
+             (private layers data))
 
 (meta-export (private))
