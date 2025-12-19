@@ -11,4 +11,8 @@
   (line-number-mode t)
   (column-number-mode t))
 
+(use-package project
+  :custom
+  (project-mode-line t))
+
 (meta-export (private layers theme config))

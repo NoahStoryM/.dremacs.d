@@ -65,7 +65,8 @@
 
   :hook
   (after-init . help-quick)
-  (text-mode . visual-line-mode))
+  (text-mode . visual-line-mode)
+  (prog-mode . electric-pair-mode))
 
 (use-package autorevert
   :config
