@@ -63,6 +63,16 @@
   (indent-tabs-mode nil)
   (tab-width 4)
 
+  ;; --- Treesitter ---
+  (major-mode-remap-alist
+   '((yaml-mode . yaml-ts-mode)
+     (bash-mode . bash-ts-mode)
+     (js2-mode . js-ts-mode)
+     (typescript-mode . typescript-ts-mode)
+     (json-mode . json-ts-mode)
+     (css-mode . css-ts-mode)
+     (python-mode . python-ts-mode)))
+
   :hook
   (after-init . help-quick)
   (text-mode . visual-line-mode)
@@ -90,7 +100,6 @@
   :custom
   (display-line-numbers-type 'visual)
   (display-line-numbers-width nil)
-
   :hook
   ((prog-mode text-mode) . display-line-numbers-mode))
 
@@ -105,5 +114,20 @@
 (use-package tab-line
   :config
   (global-tab-line-mode))
+
+(use-package eglot
+  ;; Configure hooks to automatically turn-on eglot for selected modes
+  :hook
+  ((python-mode ruby-mode elixir-mode) . eglot-ensure)
+
+  :config
+  (fset #'jsonrpc--log-event #'ignore) ; massive perf boost---don't log every event
+  ;; Sometimes you need to tell Eglot where to find the language server
+  ;; (add-to-list 'eglot-server-programs
+  ;;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
+
+  :custom
+  (eglot-extend-to-xref t)             ; activate Eglot in referenced non-project files
+  (eglot-send-changes-idle-time 0.1))
 
 (meta-export (private layers default config))

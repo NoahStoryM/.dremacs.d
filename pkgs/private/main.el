@@ -7,6 +7,7 @@
              (private layers term)
              (private layers git)
              (private layers markdown)
-             (private layers data))
+             (private layers data)
+             (private layers template))
 
 (meta-export (private))
