@@ -13,7 +13,6 @@
   (electric-pair-mode 1)
   (blink-cursor-mode -1)
   (pixel-scroll-precision-mode)
-  (cua-mode)
   (xterm-mouse-mode 1)
 
   ;; --- Font Settings ---
