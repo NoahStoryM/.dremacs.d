@@ -2,6 +2,7 @@
 
 (meta-import (private layers default)
              (private layers theme)
+             (private layers meow)
              (private layers edit)
              (private layers completion)
              (private layers term)
