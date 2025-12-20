@@ -4,6 +4,10 @@
   (spacemacs-theme-custom-colors theme)
   (load-theme theme t))
 
+(use-package rainbow-delimiters
+  :hook
+  ((prog-mode text-mode) . rainbow-delimiters-mode))
+
 (use-package doom-modeline
   :init
   (doom-modeline-mode 1)
