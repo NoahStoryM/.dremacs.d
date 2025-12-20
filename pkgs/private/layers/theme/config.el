@@ -1,8 +1,11 @@
 ;; -*- lexical-binding: t -*-
 
-(let ((theme 'spacemacs-light))
-  (spacemacs-theme-custom-colors theme)
-  (load-theme theme t))
+(use-package spacemacs-light-theme
+  :demand t
+  :config
+  (let ((theme 'spacemacs-light))
+    (spacemacs-theme-custom-colors theme)
+    (load-theme theme t)))
 
 (use-package rainbow-delimiters
   :hook
