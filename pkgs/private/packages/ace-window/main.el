@@ -3,8 +3,6 @@
 (use-package ace-window
   :ensure t
   :bind
-  (("C-SPC" . ace-window))
-  :custom
-  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+  (("M-<tab>" . ace-window)))
 
 (meta-export (private packages ace-window))
