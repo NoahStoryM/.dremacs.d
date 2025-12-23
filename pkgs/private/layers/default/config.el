@@ -22,6 +22,7 @@
 
   :custom
   ;; --- Basic Settings ---
+  (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)
   (initial-major-mode 'org-mode)
   (display-time-default-load-average nil)
