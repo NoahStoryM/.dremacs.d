@@ -6,10 +6,6 @@
   :init
   (defun meow-setup ()
     "Official Meow VIM-style QWERTY layout."
-    (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
-     '("j" . meow-next)
-     '("k" . meow-prev)
-     '("<escape>" . ignore))
     (meow-leader-define-key
      ;; Use SPC (0-9) for digit arguments.
      '("0" . meow-digit-argument)
@@ -24,6 +20,12 @@
      '("9" . meow-digit-argument)
      '("/" . meow-keypad-describe-key)
      '("?" . meow-cheatsheet))
+    (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
+     '("h" . meow-left)
+     '("j" . meow-next)
+     '("k" . meow-prev)
+     '("l" . meow-right)
+     '("<escape>" . ignore))
     (meow-normal-define-key
      '("0" . meow-expand-0)
      '("1" . meow-expand-1)
@@ -85,7 +87,10 @@
      '("Y" . meow-sync-grab)
      '("z" . meow-pop-selection)
      '("'" . repeat)
-     '("<escape>" . ignore)))
+     '("<escape>" . ignore))
+    (meow-define-keys
+     'insert
+     '("C-z" . meow-insert-exit)))
   :config
   (meow-setup))
 
