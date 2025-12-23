@@ -2,7 +2,10 @@
 
 (use-package emacs
   :bind
-  ;; Make TAB in minibuffer behave like shell completion
-  (:map minibuffer-mode-map ("TAB" . minibuffer-complete)))
+  (:map minibuffer-mode-map ("<tab>" . minibuffer-complete)))
+
+(use-package mule-cmds
+  :bind
+  ("C-<tab>" . toggle-input-method))
 
 (meta-export (private layers default keybindings))
