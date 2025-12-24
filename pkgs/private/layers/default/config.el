@@ -15,7 +15,6 @@
   (pixel-scroll-precision-mode)
   (xterm-mouse-mode 1)
   (delete-selection-mode 1)
-  (setq-default show-trailing-whitespace t)
 
   ;; --- Font Settings ---
   (when (find-font (font-spec :family "Maple Mono NL NF CN"))
@@ -78,9 +77,10 @@
      (python-mode . python-ts-mode)))
 
   :hook
-  (after-init . help-quick)
   (text-mode . visual-line-mode)
-  (prog-mode . electric-pair-mode))
+  (prog-mode . (lambda ()
+                 (electric-pair-mode)
+                 (setq show-trailing-whitespace t))))
 
 (use-package autorevert
   :config
