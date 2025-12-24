@@ -4,8 +4,8 @@
 
 (use-package meow
   :init
-  (defun meow-setup ()
-    "Official Meow VIM-style QWERTY layout."
+  (defun meow-setup-default ()
+    "Official Meow QWERTY layout."
     (meow-leader-define-key
      ;; Use SPC (0-9) for digit arguments.
      '("0" . meow-digit-argument)
@@ -91,6 +91,112 @@
     (meow-define-keys
      'insert
      '("C-z" . meow-insert-exit)))
+
+  (defun meow-setup-private ()
+    "Private Meow qwerty layout."
+    (meow-leader-define-key
+     ;; Use SPC (0-9) for digit arguments.
+     '("0" . meow-digit-argument)
+     '("1" . meow-digit-argument)
+     '("2" . meow-digit-argument)
+     '("3" . meow-digit-argument)
+     '("4" . meow-digit-argument)
+     '("5" . meow-digit-argument)
+     '("6" . meow-digit-argument)
+     '("7" . meow-digit-argument)
+     '("8" . meow-digit-argument)
+     '("9" . meow-digit-argument)
+     '("/" . meow-keypad-describe-key)
+     '("?" . meow-cheatsheet))
+
+    (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
+     '("i" . meow-prev)
+     '("j" . meow-left)
+     '("k" . meow-next)
+     '("l" . meow-right)
+     '("<escape>" . ignore))
+
+    (meow-normal-define-key
+     ;; --- Numbers & Extended Arguments ---
+     '("0" . meow-expand-0)
+     '("1" . meow-expand-1)
+     '("2" . meow-expand-2)
+     '("3" . meow-expand-3)
+     '("4" . meow-expand-4)
+     '("5" . meow-expand-5)
+     '("6" . meow-expand-6)
+     '("7" . meow-expand-7)
+     '("8" . meow-expand-8)
+     '("9" . meow-expand-9)
+     '("-" . negative-argument)
+
+     ;; --- Core Navigation (Inverted-T) ---
+     '("i" . meow-prev)
+     '("k" . meow-next)
+     '("j" . meow-left)
+     '("l" . meow-right)
+     '("I" . meow-prev-expand)
+     '("K" . meow-next-expand)
+     '("J" . meow-left-expand)
+     '("L" . meow-right-expand)
+
+     ;; --- Horizontal & Word Movement ---
+     '("h" . meow-back-word)
+     '(";" . meow-next-word)
+     '("H" . meow-back-symbol)
+     '(":" . meow-next-symbol)
+     '("<" . meow-beginning-of-thing)
+     '(">" . meow-end-of-thing)
+
+     ;; --- Vertical Movement & Jumping ---
+     '("u" . pixel-scroll-interpolate-up)
+     '("o" . pixel-scroll-interpolate-down)
+     '("t" . meow-goto-line)
+
+     ;; --- Selection, Search & Grab ---
+     '("p" . meow-mark-symbol)
+     '("P" . meow-mark-word)
+     '("n" . meow-line)
+     '("m" . meow-reverse)
+     '("q" . meow-cancel-selection)
+     '("y" . meow-pop-selection)
+     '("/" . meow-search)
+     '("'" . meow-visit)
+     '("w" . meow-grab)
+     '("W" . meow-sync-grab)
+     '("R" . meow-swap-grab)
+
+     ;; --- Editing Operations (Mainly Left Hand Area) ---
+     '("e" . meow-insert)
+     '("E" . meow-append)
+     '("d" . meow-open-below)
+     '("D" . meow-open-above)
+     '("r" . meow-replace)
+     '("s" . meow-backward-delete)
+     '("f" . meow-delete)
+     '("a" . meow-backward-kill-word)
+     '("g" . meow-kill-word)
+     '("A" . meow-backward-kill-symbol)
+     '("G" . meow-kill-symbol)
+     '("b" . meow-join)
+
+     ;; --- Undo & Clipboard ---
+     '("z" . meow-undo)
+     '("Z" . undo-redo)
+     '("x" . meow-kill)
+     '("c" . meow-save)
+     '("v" . meow-yank)
+
+     ;; --- System Key Suppression ---
+     '("<backspace>" . ignore)
+     '("<delete>" . ignore)
+     '("<escape>" . ignore))
+
+    (meow-define-keys
+     'insert
+     '("C-SPC" . meow-keypad)))
+
+  (defalias 'meow-setup #'meow-setup-private)
   :config
   (meow-setup))
 
