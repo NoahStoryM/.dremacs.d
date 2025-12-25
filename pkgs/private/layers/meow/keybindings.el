@@ -114,6 +114,9 @@
      '("j" . meow-left)
      '("k" . meow-next)
      '("l" . meow-right)
+     '("u" . pixel-scroll-interpolate-up)
+     '("o" . pixel-scroll-interpolate-down)
+     '("q" . meow-quit)
      '("<escape>" . ignore))
 
     (meow-normal-define-key
@@ -158,13 +161,14 @@
      '("P" . meow-mark-word)
      '("n" . meow-line)
      '("m" . meow-reverse)
-     '("q" . meow-cancel-selection)
+     '("q" . meow-quit)
      '("y" . meow-pop-selection)
      '("/" . meow-search)
      '("'" . meow-visit)
      '("w" . meow-grab)
      '("W" . meow-sync-grab)
      '("R" . meow-swap-grab)
+     '("<escape>" . meow-cancel-selection)
 
      ;; --- Editing Operations (Mainly Left Hand Area) ---
      '("e" . meow-insert)
@@ -189,8 +193,7 @@
 
      ;; --- System Key Suppression ---
      '("<backspace>" . ignore)
-     '("<delete>" . ignore)
-     '("<escape>" . ignore))
+     '("<delete>" . ignore))
 
     (meow-define-keys
      'insert
