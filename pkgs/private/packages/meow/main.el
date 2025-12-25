@@ -4,6 +4,7 @@
   :ensure t
   :defer t
   :custom
-  (meow-cheatsheet-layout meow-cheatsheet-layout-qwerty))
+  (meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
+  (meow-use-clipboard t))
 
 (meta-export (private packages meow))
