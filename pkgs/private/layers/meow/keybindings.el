@@ -166,8 +166,8 @@
      '("R" . meow-swap-grab)
      '("p" . meow-cancel-selection)
      '("y" . meow-pop-selection)
-     '("m" . meow-mark-symbol)
-     '("M" . meow-mark-word)
+     '("m" . meow-mark-word)
+     '("M" . meow-mark-symbol)
 
      ;; --- Editing Operations (Mainly Left Hand Area) ---
      '("d" . meow-insert)
