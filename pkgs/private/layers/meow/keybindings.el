@@ -111,7 +111,7 @@
      '("?" . meow-cheatsheet))
 
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
-     '("<escape>" . meow-normal-mode))
+     '("C-SPC" . meow-normal-mode))
 
     (meow-normal-define-key
      ;; --- Numbers & Extended Arguments ---
@@ -191,7 +191,7 @@
      '("v" . meow-yank)
 
      ;; --- System Key Suppression ---
-     '("<escape>" . meow-motion-mode)
+     '("<escape>" . ignore)
      '("<backspace>" . ignore)
      '("<delete>" . ignore))
 
