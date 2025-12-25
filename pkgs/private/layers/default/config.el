@@ -25,6 +25,7 @@
   (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)
   (initial-major-mode 'org-mode)
+  (initial-scratch-message nil)
   (display-time-default-load-average nil)
   (sentence-end-double-space nil)
   (select-enable-primary t)
