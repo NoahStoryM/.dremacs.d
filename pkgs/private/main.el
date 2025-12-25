@@ -4,6 +4,7 @@
              (private layers theme)
              (private layers window)
              (private layers pyim)
+             (private layers help)
              (private layers edit)
              (private layers completion)
              (private layers term)
