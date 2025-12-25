@@ -15,6 +15,7 @@
   (pixel-scroll-precision-mode)
   (xterm-mouse-mode 1)
   (delete-selection-mode 1)
+  (recentf-mode)
 
   ;; --- Font Settings ---
   (when (find-font (font-spec :family "Maple Mono NL NF CN"))

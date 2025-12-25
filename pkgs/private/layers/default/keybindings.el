@@ -2,6 +2,7 @@
 
 (use-package emacs
   :bind
+  (([remap list-buffers] . ibuffer))
   (:map minibuffer-mode-map ("<tab>" . minibuffer-complete)))
 
 (use-package mule-cmds
