@@ -27,6 +27,7 @@
   (initial-major-mode 'org-mode)
   (display-time-default-load-average nil)
   (sentence-end-double-space nil)
+  (select-enable-primary t)
 
   ;; --- Backup Configuration ---
   (make-backup-files t)
