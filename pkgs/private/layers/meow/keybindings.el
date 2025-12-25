@@ -110,14 +110,7 @@
      '("?" . meow-cheatsheet))
 
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
-     '("i" . meow-prev)
-     '("j" . meow-left)
-     '("k" . meow-next)
-     '("l" . meow-right)
-     '("u" . pixel-scroll-interpolate-up)
-     '("o" . pixel-scroll-interpolate-down)
-     '("q" . meow-quit)
-     '("<escape>" . ignore))
+     '("<escape>" . meow-normal-mode))
 
     (meow-normal-define-key
      ;; --- Numbers & Extended Arguments ---
@@ -131,7 +124,7 @@
      '("7" . meow-expand-7)
      '("8" . meow-expand-8)
      '("9" . meow-expand-9)
-     '("-" . negative-argument)
+     '("-" . meow-reverse)
 
      ;; --- Core Navigation (Inverted-T) ---
      '("i" . meow-prev)
@@ -142,6 +135,10 @@
      '("K" . meow-next-expand)
      '("J" . meow-left-expand)
      '("L" . meow-right-expand)
+
+     ;; --- Thing Selection ---
+     '("," . meow-inner-of-thing)
+     '("." . meow-bounds-of-thing)
 
      ;; --- Horizontal & Word Movement ---
      '("h" . meow-back-word)
@@ -157,24 +154,26 @@
      '("t" . meow-goto-line)
 
      ;; --- Selection, Search & Grab ---
-     '("p" . meow-mark-symbol)
-     '("P" . meow-mark-word)
-     '("n" . meow-line)
-     '("m" . meow-reverse)
      '("q" . meow-quit)
-     '("y" . meow-pop-selection)
+     '("b" . meow-block)
+     '("B" . meow-to-block)
+     '("n" . meow-line)
+     '("N" . meow-join)
      '("/" . meow-search)
      '("'" . meow-visit)
      '("w" . meow-grab)
      '("W" . meow-sync-grab)
      '("R" . meow-swap-grab)
-     '("<escape>" . meow-cancel-selection)
+     '("p" . meow-cancel-selection)
+     '("y" . meow-pop-selection)
+     '("m" . meow-mark-symbol)
+     '("M" . meow-mark-word)
 
      ;; --- Editing Operations (Mainly Left Hand Area) ---
-     '("e" . meow-insert)
-     '("E" . meow-append)
-     '("d" . meow-open-below)
-     '("D" . meow-open-above)
+     '("d" . meow-insert)
+     '("D" . meow-append)
+     '("e" . meow-open-above)
+     '("E" . meow-open-below)
      '("r" . meow-replace)
      '("s" . meow-backward-delete)
      '("f" . meow-delete)
@@ -182,7 +181,6 @@
      '("g" . meow-kill-word)
      '("A" . meow-backward-kill-symbol)
      '("G" . meow-kill-symbol)
-     '("b" . meow-join)
 
      ;; --- Undo & Clipboard ---
      '("z" . meow-undo)
@@ -192,12 +190,13 @@
      '("v" . meow-yank)
 
      ;; --- System Key Suppression ---
+     '("<escape>" . meow-motion-mode)
      '("<backspace>" . ignore)
      '("<delete>" . ignore))
 
     (meow-define-keys
      'insert
-     '("C-SPC" . meow-keypad)))
+     '("C-SPC" . meow-insert-exit)))
 
   (defalias 'meow-setup #'meow-setup-private)
   :config
