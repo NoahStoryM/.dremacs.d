@@ -7,6 +7,17 @@
    minibuffer-mode-map
    ("<tab>" . minibuffer-complete)))
 
+(use-package message
+  :bind
+  (:map
+   messages-buffer-mode-map
+   ("u" . pixel-scroll-interpolate-up)
+   ("o" . pixel-scroll-interpolate-down)
+   ("i" . previous-line)
+   ("k" . next-line)
+   ("j" . left-char)
+   ("l" . right-char)))
+
 (use-package dired
   :bind
   (:map
