@@ -94,9 +94,7 @@
 
 (use-package savehist
   :config
-  (savehist-mode)
-  :custom
-  (savehist-file (file-name-concat private-cache-directory "savehist")))
+  (savehist-mode))
 
 (use-package which-key
   :config
