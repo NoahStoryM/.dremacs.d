@@ -40,4 +40,23 @@
   :bind
   ("C-<tab>" . toggle-input-method))
 
+(use-package tab-line
+  :bind
+  ("M-<tab>" . tab-line-switch-to-next-tab)
+  ("M-S-<iso-lefttab>" . tab-line-switch-to-prev-tab))
+
+(use-package tab-bar
+  :bind
+  ("M-u" . tab-bar-switch-to-prev-tab)
+  ("M-o" . tab-bar-switch-to-next-tab)
+  ("M-U" . tab-bar-close-tab)
+  ("M-O" . tab-bar-new-tab))
+
+(use-package windmove
+  :bind
+  ("M-i" . windmove-up)
+  ("M-k" . windmove-down)
+  ("M-j" . windmove-left)
+  ("M-l" . windmove-right))
+
 (meta-export (private layers default keybindings))
