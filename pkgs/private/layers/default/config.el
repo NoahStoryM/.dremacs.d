@@ -16,6 +16,7 @@
   (xterm-mouse-mode 1)
   (delete-selection-mode 1)
   (recentf-mode)
+  (cua-mode)
   (fset 'yes-or-no-p 'y-or-n-p)
 
   ;; --- Font Settings ---
