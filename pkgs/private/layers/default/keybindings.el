@@ -2,7 +2,8 @@
 
 (use-package emacs
   :bind
-  (([remap list-buffers] . ibuffer))
+  (([remap list-buffers] . ibuffer)
+   ([remap yes-or-no-p] . y-or-n-p))
   (:map
    minibuffer-mode-map
    ("<tab>" . minibuffer-complete)))

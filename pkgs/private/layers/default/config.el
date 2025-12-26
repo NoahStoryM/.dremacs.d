@@ -17,7 +17,6 @@
   (delete-selection-mode 1)
   (recentf-mode)
   (cua-mode)
-  (fset 'yes-or-no-p 'y-or-n-p)
 
   ;; --- Font Settings ---
   (let ((font-family "Maple Mono NL NF CN"))
