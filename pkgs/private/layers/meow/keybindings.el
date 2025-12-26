@@ -158,6 +158,7 @@
      '("B" . meow-to-block)
      '("n" . meow-line)
      '("N" . meow-join)
+     '("?" . meow-till)
      '("/" . meow-visit)
      '("'" . meow-search)
      '("w" . meow-grab)
