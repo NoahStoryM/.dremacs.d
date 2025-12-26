@@ -19,8 +19,9 @@
   (fset 'yes-or-no-p 'y-or-n-p)
 
   ;; --- Font Settings ---
-  (when (find-font (font-spec :family "Maple Mono NL NF CN"))
-    (set-face-attribute 'default nil :family "Maple Mono NL NF CN" :height 135))
+  (let ((font-family "Maple Mono NL NF CN"))
+    (when (find-font (font-spec :family font-family))
+      (set-face-attribute 'default nil :family font-family :height 135)))
 
   :custom
   ;; --- Basic Settings ---
