@@ -21,10 +21,8 @@
      '("/" . meow-keypad-describe-key)
      '("?" . meow-cheatsheet))
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
-     '("h" . meow-left)
      '("j" . meow-next)
      '("k" . meow-prev)
-     '("l" . meow-right)
      '("<escape>" . ignore))
     (meow-normal-define-key
      '("0" . meow-expand-0)
