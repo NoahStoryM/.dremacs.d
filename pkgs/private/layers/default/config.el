@@ -16,6 +16,7 @@
   (xterm-mouse-mode 1)
   (delete-selection-mode 1)
   (recentf-mode)
+  (fset 'yes-or-no-p 'y-or-n-p)
 
   ;; --- Font Settings ---
   (when (find-font (font-spec :family "Maple Mono NL NF CN"))
@@ -83,6 +84,10 @@
   (prog-mode . (lambda ()
                  (electric-pair-mode)
                  (setq show-trailing-whitespace t))))
+
+(use-package dired
+  :custom
+  (dired-recursive-deletes 'always))
 
 (use-package autorevert
   :config
