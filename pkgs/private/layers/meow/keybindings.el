@@ -174,7 +174,6 @@
      '("D" . meow-append)
      '("e" . meow-open-above)
      '("E" . meow-open-below)
-     '("r" . meow-replace)
      '("s" . meow-backward-delete)
      '("f" . meow-delete)
      '("a" . meow-backward-kill-word)
@@ -184,10 +183,12 @@
 
      ;; --- Undo & Clipboard ---
      '("z" . meow-undo)
-     '("Z" . undo-redo)
+     '("Z" . meow-undo-in-selection)
+     '("r" . undo-redo)
      '("x" . meow-kill)
      '("c" . meow-save)
      '("v" . meow-yank)
+     '("V" . meow-replace)
 
      ;; --- System Key Suppression ---
      '("<escape>" . ignore)
