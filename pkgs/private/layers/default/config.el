@@ -85,7 +85,7 @@
   (text-mode . visual-line-mode)
   (prog-mode . (lambda ()
                  (setq-local show-trailing-whitespace t)
-                 dirvish-subtree-toggle-or-open(electric-pair-mode))))
+                 (electric-pair-mode))))
 
 (use-package dired
   :config
