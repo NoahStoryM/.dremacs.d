@@ -150,7 +150,9 @@
      ;; --- Vertical Movement & Jumping ---
      '("u" . pixel-scroll-interpolate-up)
      '("o" . pixel-scroll-interpolate-down)
-     '("t" . meow-goto-line)
+     '("t" . meow-till)
+     '("T" . meow-find)
+     '("?" . meow-goto-line)
 
      ;; --- Selection, Search & Grab ---
      '("q" . meow-quit)
@@ -158,7 +160,6 @@
      '("B" . meow-to-block)
      '("n" . meow-line)
      '("N" . meow-join)
-     '("?" . meow-till)
      '("/" . meow-visit)
      '("'" . meow-search)
      '("w" . meow-grab)
@@ -186,6 +187,7 @@
      '("Z" . meow-undo-in-selection)
      '("r" . undo-redo)
      '("x" . meow-kill)
+     '("X" . meow-change)
      '("c" . meow-save)
      '("v" . meow-yank)
      '("V" . meow-replace)
