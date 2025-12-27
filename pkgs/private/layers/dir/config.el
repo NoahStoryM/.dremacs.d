@@ -31,10 +31,10 @@
   ;; Make dired-omit-mode hide all "dotfiles"
   (dired-omit-files (concat dired-omit-files "\\|^\\..*$")))
 
-(use-package diredfl
-  :hook
-  ((dired-mode . diredfl-mode)
-   ;; highlight parent and directory preview as well
-   (dirvish-directory-view-mode . diredfl-mode)))
+;; (use-package diredfl
+;;   :hook
+;;   ((dired-mode . diredfl-mode)
+;;    ;; highlight parent and directory preview as well
+;;    (dirvish-directory-view-mode . diredfl-mode)))
 
 (meta-export (private layers dir config))
