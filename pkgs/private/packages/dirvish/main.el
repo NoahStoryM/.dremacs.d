@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t -*-
 
 (use-package dirvish
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (meta-export (private packages dirvish))

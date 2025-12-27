@@ -2,6 +2,7 @@
 
 (use-package helpful
   :ensure t
+  :defer t
   :bind
   (([remap describe-key]      . helpful-key)
    ([remap describe-mode]     . helpful-mode)
