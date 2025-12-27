@@ -25,6 +25,7 @@
 
   :custom
   ;; --- Basic Settings ---
+  (use-short-answers t)
   (mouse-drag-and-drop-region-cross-program t)
   (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)

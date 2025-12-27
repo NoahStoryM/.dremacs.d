@@ -24,8 +24,7 @@
   (dirvish-side-follow-mode)
 
   :hook
-  (dirvish-mode . (lambda ()
-                    (setq-local mouse-1-click-follows-link nil))))
+  (dirvish-mode . (lambda () (setq-local mouse-1-click-follows-link nil))))
 
 (use-package dired-x
   :custom
