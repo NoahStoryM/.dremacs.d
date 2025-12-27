@@ -4,6 +4,7 @@
 
 (use-package dirvish
   :bind
+  ("M-`" . dirvish-side)
   (:map
    dirvish-mode-map
    ("?" . dirvish-dispatch)          ; [?] a helpful cheatsheet
