@@ -23,10 +23,13 @@
   :bind
   (:map
    dired-mode-map
+   ("^" . dired-do-kill-lines)
+   ("k" . dired-up-directory)
    ("j" . dired-previous-line)
    ("l" . dired-next-line)
    ("n" . dired-goto-file)
-   ("p" . dired-do-redisplay)))
+   ("p" . dired-do-redisplay)
+   ("<tab>" . dired-maybe-insert-subdir)))
 
 (use-package ibuffer
   :bind

@@ -3,6 +3,7 @@
 (meta-import (private layers default)
              (private layers theme)
              (private layers pyim)
+             (private layers dir)
              (private layers help)
              (private layers edit)
              (private layers completion)

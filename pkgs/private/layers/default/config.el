@@ -25,6 +25,7 @@
 
   :custom
   ;; --- Basic Settings ---
+  (mouse-drag-and-drop-region-cross-program t)
   (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)
   (initial-major-mode 'org-mode)
@@ -83,16 +84,37 @@
   :hook
   (text-mode . visual-line-mode)
   (prog-mode . (lambda ()
-                 (electric-pair-mode)
-                 (setq show-trailing-whitespace t))))
+                 (setq-local show-trailing-whitespace t)
+                 dirvish-subtree-toggle-or-open(electric-pair-mode))))
 
 (use-package dired
+  :config
+  (put 'dired-find-alternate-file 'disabled nil)
   :custom
-  (dired-recursive-deletes 'always))
+  (dired-mouse-drag-files t)
+  (dired-recursive-deletes 'always)
+  (dired-listing-switches "-l --almost-all --human-readable --group-directories-first --no-group"))
+
+(use-package tramp
+  :config
+  ;; https://www.gnu.org/software/tramp/#Improving-performance-of-asynchronous-remote-processes
+  (connection-local-set-profile-variables
+   'remote-direct-async-process
+   '((tramp-direct-async-process . t)))
+  (connection-local-set-profiles
+   '(:application tramp :protocol "ssh")
+   'remote-direct-async-process)
+
+  :custom
+  ;; Tips to speed up connections
+  (tramp-verbose 0)
+  (tramp-chunksize 2000)
+  (tramp-ssh-controlmaster-options nil))
 
 (use-package autorevert
   :config
   (global-auto-revert-mode)
+
   :custom
   (auto-revert-avoid-polling t)
   (auto-revert-interval 5)
@@ -110,6 +132,7 @@
   :custom
   (display-line-numbers-type 'visual)
   (display-line-numbers-width nil)
+
   :hook
   ((prog-mode text-mode) . display-line-numbers-mode))
 
