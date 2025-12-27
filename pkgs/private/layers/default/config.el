@@ -97,6 +97,7 @@
   (dired-listing-switches "-l --almost-all --human-readable --group-directories-first --no-group"))
 
 (use-package tramp
+  :defer t
   :config
   ;; https://www.gnu.org/software/tramp/#Improving-performance-of-asynchronous-remote-processes
   (connection-local-set-profile-variables
