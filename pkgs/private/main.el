@@ -12,6 +12,7 @@
              (private layers markdown)
              (private layers data)
              (private layers template)
+             (private layers racket)
              (private layers meow))
 
 (meta-export (private))
