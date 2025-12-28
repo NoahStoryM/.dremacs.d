@@ -40,6 +40,19 @@
    ("n" . ibuffer-jump-to-buffer)
    ("p" . ibuffer-do-redisplay)))
 
+(use-package info
+  :bind
+  (:map
+   Info-mode-map
+   ("u" . Info-scroll-up)
+   ("o" . Info-scroll-down)
+   ("i" . previous-line)
+   ("k" . next-line)
+   ("j" . backward-char)
+   ("l" . forward-char)
+   ("I" . Info-index)
+   ("L" . Info-history-back)))
+
 (use-package mule-cmds
   :bind
   ("C-<tab>" . toggle-input-method))
