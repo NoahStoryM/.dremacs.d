@@ -44,8 +44,8 @@
   :bind
   (:map
    Info-mode-map
-   ("u" . Info-scroll-up)
-   ("o" . Info-scroll-down)
+   ("o" . Info-scroll-up)
+   ("u" . Info-scroll-down)
    ("i" . previous-line)
    ("k" . next-line)
    ("j" . backward-char)
