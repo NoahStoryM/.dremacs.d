@@ -10,7 +10,6 @@
   :config
   ;; --- Global mode Settings ---
   (show-paren-mode 1)
-  (electric-pair-mode 1)
   (blink-cursor-mode -1)
   (pixel-scroll-precision-mode)
   (xterm-mouse-mode 1)
@@ -86,7 +85,7 @@
   (text-mode . visual-line-mode)
   (prog-mode . (lambda ()
                  (setq-local show-trailing-whitespace t)
-                 (electric-pair-mode))))
+                 (display-fill-column-indicator-mode))))
 
 (use-package dired
   :defer t
