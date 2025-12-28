@@ -3,8 +3,10 @@
 (meta-import (private layers dir packages))
 
 (use-package dirvish
+  :defer t
   :init
-  (dirvish-override-dired-mode)
+  (with-eval-after-load 'dired
+    (dirvish-override-dired-mode))
 
   :custom
   (dirvish-quick-access-entries
@@ -27,6 +29,7 @@
   (dirvish-mode . (lambda () (setq-local mouse-1-click-follows-link nil))))
 
 (use-package dired-x
+  :after dired
   :custom
   ;; Make dired-omit-mode hide all "dotfiles"
   (dired-omit-files (concat dired-omit-files "\\|^\\..*$")))

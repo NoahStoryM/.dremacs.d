@@ -12,8 +12,8 @@
   ((prog-mode text-mode) . rainbow-delimiters-mode))
 
 (use-package doom-modeline
-  :init
-  (doom-modeline-mode 1)
+  :hook
+  (emacs-startup . doom-modeline-mode)
   :custom
   (line-number-mode t)
   (column-number-mode t))

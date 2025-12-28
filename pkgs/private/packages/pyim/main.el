@@ -2,6 +2,7 @@
 
 (use-package pyim
   :ensure t
+  :defer t
   :custom
   (pyim-page-length 9)
   (pyim-page-style 'vertical)

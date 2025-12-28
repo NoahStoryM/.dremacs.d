@@ -89,6 +89,7 @@
                  (electric-pair-mode))))
 
 (use-package dired
+  :defer t
   :config
   (put 'dired-find-alternate-file 'disabled nil)
   :custom
