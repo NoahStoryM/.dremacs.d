@@ -15,7 +15,7 @@
   (xterm-mouse-mode 1)
   (delete-selection-mode 1)
   (recentf-mode)
-  (cua-mode)
+  ;;(cua-mode)      ; disable `cua-mode' due to a conflict with `meow'
 
   ;; --- Font Settings ---
   (let ((font-family "Maple Mono NL NF CN"))
