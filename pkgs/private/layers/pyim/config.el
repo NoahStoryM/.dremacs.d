@@ -2,11 +2,11 @@
 
 (meta-import (private layers pyim packages))
 
-(use-package pyim-basedict
-  :commands
-  (pyim-convert-string-at-point)
+(use-package pyim
   :custom
-  (default-input-method "pyim")
+  (default-input-method "pyim"))
+
+(use-package pyim-basedict
   :config
   (pyim-basedict-enable))
 
