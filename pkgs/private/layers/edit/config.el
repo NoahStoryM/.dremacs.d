@@ -7,7 +7,9 @@
   ;; Narrowing lets you restrict results to certain groups of candidates
   (consult-narrow-key "<"))
 
-(use-package embark-consult)
+(if (locate-library "embark-consult")
+    (use-package embark-consult)
+  (use-package embark-consult :ensure t))
 (use-package embark
   :demand t
   :after (avy embark-consult)
