@@ -12,8 +12,8 @@
      ;;                                                                  ~~ Dark ~~                              ~~ Light ~~
      ;;                                                                     GUI       TER                           GUI       TER
      ;; generic
-     (base          . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#bbc2cf" "#bbc2cf") (if (true-color-p) "#000000" "#000000")))
-     (bg1           . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#282a36" "#29282e") (if (true-color-p) "#fdf7e3" "#ffffff")))
+     (base          . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#bbc2cf" "#bbc2cf") (if (true-color-p) "#002b36" "#000000")))
+     (bg1           . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#282a36" "#29282e") (if (true-color-p) "#fdf6e3" "#ffffff")))
      (bg2           . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#23212a" "#1c1c1c") (if (true-color-p) "#eeede8" "#e4e4e4")))
      (cblk-bg       . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#2f2b33" "#262626") (if (true-color-p) "#fff8dc" "#ffffff")))
      (func          . ,(if (eq theme 'spacemacs-dark) (if (true-color-p) "#bc6ec5" "#d75fd7") (if (true-color-p) "#705091" "#8700af")))
