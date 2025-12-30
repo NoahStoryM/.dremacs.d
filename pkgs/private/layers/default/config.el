@@ -35,12 +35,6 @@
   (text-mode-ispell-word-completion nil)
 
   ;; --- Backup Configuration ---
-  (make-backup-files t)
-  (version-control t)
-  (backup-by-copying t)
-  (delete-old-versions t)
-  (kept-new-versions 6)
-  (kept-old-versions 2)
   (make-backup-file-name-function 'private--backup-file-name)
 
   ;; --- Minibuffer & Completion (Native UI) ---
