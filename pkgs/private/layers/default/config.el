@@ -78,7 +78,13 @@
      (js2-mode . js-ts-mode)
      (typescript-mode . typescript-ts-mode)
      (json-mode . json-ts-mode)
+     (html-mode . html-ts-mode)
      (css-mode . css-ts-mode)
+     (c-mode . c-ts-mode)
+     (c++-mode . c++-ts-mode)
+     (c-or-c++-mode . c-or-c++-ts-mode)
+     (csharp-mode . csharp-ts-mode)
+     (jave-mode . java-ts-mode)
      (python-mode . python-ts-mode)))
 
   :hook
