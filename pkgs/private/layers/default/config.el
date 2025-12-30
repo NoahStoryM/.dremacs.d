@@ -32,6 +32,7 @@
   (initial-scratch-message nil)
   (display-time-default-load-average nil)
   (sentence-end-double-space nil)
+  (text-mode-ispell-word-completion nil)
 
   ;; --- Backup Configuration ---
   (make-backup-files t)
