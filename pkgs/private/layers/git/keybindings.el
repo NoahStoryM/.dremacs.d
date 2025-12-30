@@ -13,6 +13,18 @@
    ("j" . magit-section-forward)
    ("l" . magit-section-backward)
    ("n" . magit-status-jump)
+   ("p" . magit-log))
+  (:map
+   magit-log-mode-map
+   ("j" . magit-section-forward)
+   ("l" . magit-section-backward)
+   ("n" . magit-log-move-to-revision)
+   ("p" . magit-log))
+  (:map
+   magit-stash-mode-map
+   ("j" . magit-section-forward)
+   ("l" . magit-section-backward)
+   ("n" . magit-jump-tp-diffstat-or-iff)
    ("p" . magit-log)))
 
 (meta-export (private layers git keybindings))
