@@ -3,7 +3,7 @@
 (defun true-color-p ()
   (or
    (display-graphic-p)
-   (= (tty-display-color-cells) 16777216)))
+   (= (tty-display-color-cells) #x1000000)))
 
 (defun spacemacs-theme-custom-colors (theme)
   (setopt
