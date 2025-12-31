@@ -34,6 +34,10 @@
   ;; Make dired-omit-mode hide all "dotfiles"
   (dired-omit-files (concat dired-omit-files "\\|^\\..*$")))
 
+(use-package dired-du
+  :hook
+  (dired-mode . dired-du-mode))
+
 ;; (use-package diredfl
 ;;   :hook
 ;;   ((dired-mode . diredfl-mode)
