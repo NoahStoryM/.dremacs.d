@@ -29,7 +29,7 @@
    ("l" . dired-next-line)
    ("n" . dired-goto-file)
    ("p" . dired-do-redisplay)
-   ("<tab>" . dired-maybe-insert-subdir)))
+   ("<backtab>" . dired-maybe-insert-subdir)))
 
 (use-package ibuffer
   :bind

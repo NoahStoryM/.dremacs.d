@@ -20,6 +20,7 @@
    ("N" . dirvish-narrow)
    ("'" . dirvish-history-last)
    ("i" . dirvish-subtree-toggle)
+   ("<tab>" . dirvish-subtree-toggle)
    ("M-f" . dirvish-history-go-forward)
    ("M-b" . dirvish-history-go-backward)
    ("M-e" . dirvish-emerge-menu)
