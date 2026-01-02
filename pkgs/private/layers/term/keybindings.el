@@ -6,8 +6,9 @@
   :bind
   (:map
    eshell-mode-map
-   ("C-j" . eshell-previous-input)
-   ("C-l" . eshell-next-input)))
+   ("C-l" . eshell/clear)
+   ("C-p" . eshell-previous-input)
+   ("C-n" . eshell-next-input)))
 
 (use-package capf-autosuggest
   :bind
