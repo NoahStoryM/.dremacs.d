@@ -8,6 +8,17 @@
    minibuffer-mode-map
    ("<tab>" . minibuffer-complete)))
 
+(use-package man
+  :bind
+  (:map
+   Man-mode-map
+   ("u" . pixel-scroll-interpolate-up)
+   ("o" . pixel-scroll-interpolate-down)
+   ("i" . previous-line)
+   ("k" . next-line)
+   ("j" . left-char)
+   ("l" . right-char)))
+
 (use-package message
   :bind
   (:map
