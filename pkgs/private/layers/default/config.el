@@ -94,6 +94,8 @@
   (put 'dired-find-alternate-file 'disabled nil)
   :custom
   (dired-mouse-drag-files t)
+  (dired-create-destination-dirs t)
+  (dired-create-destination-dirs-on-trailing-dirsep t)
   (dired-recursive-deletes 'always)
   (dired-listing-switches "-l --almost-all --human-readable --group-directories-first --no-group"))
 
