@@ -28,7 +28,7 @@
   (mouse-drag-and-drop-region-cross-program t)
   (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)
-  (initial-major-mode 'org-mode)
+  (initial-major-mode 'fundamental-mode)
   (initial-scratch-message nil)
   (display-time-default-load-average nil)
   (sentence-end-double-space nil)
