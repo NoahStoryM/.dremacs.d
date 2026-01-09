@@ -79,7 +79,10 @@
   ("M-u" . tab-bar-switch-to-prev-tab)
   ("M-o" . tab-bar-switch-to-next-tab)
   ("M-U" . tab-bar-close-tab)
-  ("M-O" . tab-bar-new-tab))
+  ("M-O" . tab-bar-new-tab)
+  (:map
+   tab-bar-mode-map
+   ("C-S-<iso-lefttab>" . nil)))
 
 (use-package windmove
   :bind

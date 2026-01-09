@@ -9,6 +9,8 @@
   ("C-x g s" . magit-status)
   (:map
    magit-status-mode-map
+   ("C-S-<iso-lefttab>" . magit-section-cycle-diffs)
+   ("M-<tab>" . nil)
    ("j" . magit-section-forward)
    ("l" . magit-section-backward)
    ("n" . magit-status-jump)
