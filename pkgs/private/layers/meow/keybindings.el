@@ -109,9 +109,11 @@
      '("?" . meow-cheatsheet))
 
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
-     '("C-SPC" . meow-normal-mode))
+     '("C-c C-e" . meow-normal-mode))
 
     (meow-normal-define-key
+     '("C-c C-j" . meow-motion-mode)
+
      ;; --- Numbers & Extended Arguments ---
      '("0" . meow-expand-0)
      '("1" . meow-expand-1)
