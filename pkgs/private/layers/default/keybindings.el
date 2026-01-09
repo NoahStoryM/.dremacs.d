@@ -2,6 +2,7 @@
 
 (use-package emacs
   :bind
+  ("C-x C-0" . nil)
   (([remap list-buffers] . ibuffer)
    ([remap yes-or-no-p] . y-or-n-p))
   (:map
