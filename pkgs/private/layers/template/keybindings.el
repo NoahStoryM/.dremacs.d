@@ -4,7 +4,8 @@
 
 (use-package tempel
   :bind
-  ("C-k" . tempel-insert)
+  ("M-*" . tempel-insert)
+  ("M-+" . tempel-complete)
   (:map
    tempel-map
    ("C-k" . tempel-done)
