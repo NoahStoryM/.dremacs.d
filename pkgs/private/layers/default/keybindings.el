@@ -2,7 +2,7 @@
 
 (use-package emacs
   :bind
-  ("C-D" . backward-delete-char)
+  ("C-S-d" . backward-delete-char)
   ("M-D" . backward-kill-word)
   ("C-x C-0" . nil)
   (([remap list-buffers] . ibuffer)
