@@ -13,19 +13,19 @@
    ("M-<tab>" . nil)
    ("l" . magit-section-forward)
    ("j" . magit-section-backward)
-   ("n" . magit-status-jump)
-   ("p" . magit-log))
+   ("p" . magit-status-jump)
+   ("n" . magit-log))
   (:map
    magit-log-mode-map
    ("l" . magit-section-forward)
    ("j" . magit-section-backward)
-   ("n" . magit-log-move-to-revision)
-   ("p" . magit-log))
+   ("p" . magit-log-move-to-revision)
+   ("n" . magit-log))
   (:map
    magit-stash-mode-map
    ("l" . magit-section-forward)
    ("j" . magit-section-backward)
-   ("n" . magit-jump-tp-diffstat-or-iff)
-   ("p" . magit-log)))
+   ("p" . magit-jump-tp-diffstat-or-iff)
+   ("n" . magit-log)))
 
 (meta-export (private layers git keybindings))
