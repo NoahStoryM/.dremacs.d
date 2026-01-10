@@ -9,4 +9,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (pixel-scroll-precision-mode 1)
+(add-to-list 'default-frame-alist '(foreground-color . "#002b36"))
+(add-to-list 'default-frame-alist '(background-color . "#fdf6e3"))
 (add-to-list 'default-frame-alist '(undecorated . t))
