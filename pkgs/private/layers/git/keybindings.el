@@ -11,20 +11,20 @@
    magit-status-mode-map
    ("C-S-<iso-lefttab>" . magit-section-cycle-diffs)
    ("M-<tab>" . nil)
-   ("j" . magit-section-forward)
-   ("l" . magit-section-backward)
+   ("l" . magit-section-forward)
+   ("j" . magit-section-backward)
    ("n" . magit-status-jump)
    ("p" . magit-log))
   (:map
    magit-log-mode-map
-   ("j" . magit-section-forward)
-   ("l" . magit-section-backward)
+   ("l" . magit-section-forward)
+   ("j" . magit-section-backward)
    ("n" . magit-log-move-to-revision)
    ("p" . magit-log))
   (:map
    magit-stash-mode-map
-   ("j" . magit-section-forward)
-   ("l" . magit-section-backward)
+   ("l" . magit-section-forward)
+   ("j" . magit-section-backward)
    ("n" . magit-jump-tp-diffstat-or-iff)
    ("p" . magit-log)))
 
