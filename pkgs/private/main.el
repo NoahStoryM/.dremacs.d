@@ -9,6 +9,7 @@
              (private layers completion)
              (private layers term)
              (private layers git)
+             (private layers org)
              (private layers markdown)
              (private layers data)
              (private layers template)
