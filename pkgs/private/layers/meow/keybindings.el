@@ -109,9 +109,11 @@
      '("?" . meow-cheatsheet))
 
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
+     '("M-m" . meow-keypad)
      '("C-c C-e" . meow-normal-mode))
 
     (meow-normal-define-key
+     '("M-m" . meow-keypad)
      '("C-c C-j" . meow-motion-mode)
 
      ;; --- Numbers & Extended Arguments ---
@@ -201,6 +203,7 @@
 
     (meow-define-keys
      'insert
+     '("M-m" . meow-keypad)
      '("C-SPC" . meow-insert-exit)))
 
   (defalias 'meow-setup #'meow-setup-private)
