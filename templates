@@ -54,5 +54,17 @@ prog-mode
 (hack (if (or (derived-mode-p 'racket-mode) (derived-mode-p 'emacs-lisp-mode)) ";; " comment-start) "HACK: ")
 (working (if (or (derived-mode-p 'racket-mode) (derived-mode-p 'emacs-lisp-mode)) ";; " comment-start) "WORKING HERE: ")
 
+(lambda "λ")
+
+(-> "→")
+(<- "←")
+(-o "⊸")
+(o- "⟜")
+
+(ring "∘")
+(bullet "∙")
+(times "⊗")
+(par "⅋")
+
 
 ;; See the README of Tempel for more template ideas
