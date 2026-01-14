@@ -64,6 +64,7 @@ prog-mode
 (ring "∘")
 (bullet "∙")
 (times "⊗")
+(plus "⊕")
 (par "⅋")
 
 
