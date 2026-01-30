@@ -106,7 +106,8 @@
      '("9" . meow-digit-argument)
      '("-" . negative-argument)
      '("/" . meow-keypad-describe-key)
-     '("?" . meow-cheatsheet))
+     '("?" . meow-cheatsheet)
+     '("SPC" . execute-extended-command))
 
     (meow-motion-overwrite-define-key ; TODO "1.6.0" using `meow-motion-define-key'
      '("M-m" . meow-keypad)
