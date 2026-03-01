@@ -155,6 +155,8 @@
      ;; --- Vertical Movement & Jumping ---
      '("u" . pixel-scroll-interpolate-up)
      '("o" . pixel-scroll-interpolate-down)
+     '("U" . scroll-down-line)
+     '("O" . scroll-up-line)
      '("t" . meow-till)
      '("T" . meow-find)
      '("?" . meow-goto-line)
