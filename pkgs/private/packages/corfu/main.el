@@ -7,6 +7,7 @@
   (corfu-auto t)
   (corfu-cycle t)
   (corfu-quit-no-match 'separator)
+  (corfu-auto-prefix 2)
   :bind
   (:map corfu-map
         ("C-n" . corfu-next)
