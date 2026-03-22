@@ -59,6 +59,8 @@ fundamental-mode
 
 (all "∀")
 (exists "∃")
+(union "∪")
+(intersection "∩")
 (neg "¬")
 (bot "⊥")
 (top "⊤")
