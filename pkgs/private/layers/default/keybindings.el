@@ -49,8 +49,8 @@
   :bind
   (:map
    ibuffer-mode-map
-   ("j" . ibuffer-forward-line)
-   ("l" . ibuffer-backward-line)
+   ("j" . ibuffer-backward-line)
+   ("l" . ibuffer-forward-line)
    ("n" . ibuffer-jump-to-buffer)
    ("p" . ibuffer-do-redisplay)))
 
