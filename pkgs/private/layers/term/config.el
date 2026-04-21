@@ -5,6 +5,8 @@
 
 (use-package eshell
   :defer t
+  :custom
+  (eshell-hist-ignoredups t)
   :hook
   ((eshell-mode . private-setup-eshell)))
 
