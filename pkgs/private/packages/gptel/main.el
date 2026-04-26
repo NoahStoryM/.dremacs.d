@@ -4,6 +4,7 @@
   :ensure t
   :defer t
   :custom
+  (gptel-default-mode 'org-mode)
   (gptel-temperature 0.7)
   (gptel-prompt-prefix-alist
      '((org-mode . "** user\n")
