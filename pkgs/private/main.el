@@ -15,6 +15,7 @@
              (private layers template)
              (private layers scheme)
              (private layers racket)
+             (private layers llm)
              (private layers meow))
 
 (meta-export (private))
