@@ -20,7 +20,7 @@
   ;; --- Font Settings ---
   (let ((font-family "Maple Mono NL NF CN"))
     (when (find-font (font-spec :family font-family))
-      (set-face-attribute 'default nil :family font-family :height 125)))
+      (set-face-attribute 'default nil :family font-family :height 105)))
 
   :custom
   ;; --- Basic Settings ---
