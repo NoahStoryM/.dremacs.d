@@ -1,7 +1,8 @@
 ;;; init.el --- User Initialization File -*- lexical-binding: t -*-
 
-(with-eval-after-load 'package
-  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(unless package-archive-contents (package-read-all-archive-contents))
 
 (setq user-emacs-directory (file-name-concat user-emacs-directory ".local/"))
 (make-directory user-emacs-directory t)
