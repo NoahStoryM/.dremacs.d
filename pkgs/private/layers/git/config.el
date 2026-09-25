@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-(meta-import (private layers dir packages))
+(meta-import (private layers git packages))
 
 (use-package magit
   :custom

@@ -8,7 +8,7 @@
   (default-input-method "pyim"))
 
 (use-package pyim-basedict
-  :defer t
+  :after pyim
   :config
   (pyim-basedict-enable))
 

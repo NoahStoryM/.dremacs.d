@@ -13,8 +13,8 @@
    '(("h" "~/"                          "Home")
      ("d" "~/Downloads/"                "Downloads")
      ("m" "/mnt/"                       "Drives")
-     ("s" "/ssh:my-remote-server")      "SSH server"
-     ("e" "/sudo:root@localhost:/etc")  "Modify program settings"
+     ("s" "/ssh:my-remote-server"       "SSH server")
+     ("e" "/sudo:root@localhost:/etc"   "Modify program settings")
      ("t" "~/.local/share/Trash/files/" "TrashCan")))
   (dirvish-mode-line-format '(:left (sort symlink) :right (omit yank index)))
   (dirvish-attributes '(vc-state subtree-state nerd-icons collapse git-msg file-time file-size))

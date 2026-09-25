@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 
-(meta-import (private layers org keybindings))
+(meta-import (private layers org packages))
 
 (use-package toc-org
   :bind

@@ -25,7 +25,7 @@
    magit-stash-mode-map
    ("l" . magit-section-forward)
    ("j" . magit-section-backward)
-   ("p" . magit-jump-tp-diffstat-or-iff)
+   ("p" . magit-jump-to-diffstat-or-diff)
    ("n" . magit-log)))
 
 (meta-export (private layers git keybindings))

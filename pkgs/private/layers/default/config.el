@@ -67,20 +67,9 @@
   (tab-width 4)
 
   ;; --- Treesitter ---
-  (major-mode-remap-alist
-   '((yaml-mode . yaml-ts-mode)
-     (bash-mode . bash-ts-mode)
-     (js2-mode . js-ts-mode)
-     (typescript-mode . typescript-ts-mode)
-     (json-mode . json-ts-mode)
-     (html-mode . html-ts-mode)
-     (css-mode . css-ts-mode)
-     (c-mode . c-ts-mode)
-     (c++-mode . c++-ts-mode)
-     (c-or-c++-mode . c-or-c++-ts-mode)
-     (csharp-mode . csharp-ts-mode)
-     (jave-mode . java-ts-mode)
-     (python-mode . python-ts-mode)))
+  ;; Only remap to a `*-ts-mode' whose grammar is actually installed;
+  ;; otherwise the buffer ends up without font-lock.
+  (major-mode-remap-alist (private--treesit-remap-alist))
 
   :hook
   (text-mode . visual-line-mode)
@@ -155,8 +144,10 @@
 
 (use-package eglot
   ;; Configure hooks to automatically turn-on eglot for selected modes
+  ;; Hook the base modes: `python-ts-mode' derives from `python-base-mode',
+  ;; so after the remap above `python-mode-hook' never runs.
   :hook
-  ((python-mode ruby-mode elixir-mode) . eglot-ensure)
+  (python-base-mode . eglot-ensure)
 
   :config
   (fset #'jsonrpc--log-event #'ignore) ; massive perf boost---don't log every event
