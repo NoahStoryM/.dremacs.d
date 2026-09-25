@@ -5,8 +5,7 @@
   ("C-S-d" . backward-delete-char)
   ("M-D" . backward-kill-word)
   ("C-x C-0" . nil)
-  (([remap list-buffers] . ibuffer)
-   ([remap yes-or-no-p] . y-or-n-p))
+  ([remap list-buffers] . ibuffer)
   (:map
    minibuffer-mode-map
    ("<tab>" . minibuffer-complete)))
@@ -22,7 +21,7 @@
    ("j" . left-char)
    ("l" . right-char)))
 
-(use-package message
+(use-package emacs                      ; `messages-buffer-mode-map' is in simple.el
   :bind
   (:map
    messages-buffer-mode-map
@@ -67,7 +66,7 @@
    ("I" . Info-index)
    ("L" . Info-history-back)))
 
-(use-package mule-cmds
+(use-package emacs
   :bind
   ("C-<tab>" . toggle-input-method))
 

@@ -6,6 +6,7 @@
   :bind
   (:map
    eshell-mode-map
+   ("C-r" . consult-history)
    ("C-l" . eshell/clear)
    ("C-p" . eshell-previous-input)
    ("C-n" . eshell-next-input)))

@@ -8,7 +8,7 @@
    corfu-map
    ("C-j" . corfu-previous)
    ("C-l" . corfu-next)
-   ("C-k" . keyboard-quit)))
+   ("C-k" . corfu-quit)))
 
 (use-package vertico
   :bind

@@ -28,7 +28,6 @@
   (mouse-drag-and-drop-region-cross-program t)
   (delete-by-moving-to-trash t)
   (inhibit-splash-screen t)
-  (initial-major-mode 'fundamental-mode)
   (initial-scratch-message nil)
   (display-time-default-load-average nil)
   (sentence-end-double-space nil)
@@ -38,20 +37,14 @@
   (read-process-output-max (* 1024 1024))
 
   ;; --- Backup Configuration ---
-  (make-backup-file-name-function 'private--backup-file-name)
+  ;; The built-in mechanism escapes paths correctly (including TRAMP).
+  (backup-directory-alist `(("." . ,(locate-user-emacs-file "emacs-backup/"))))
 
   ;; --- Minibuffer & Completion (Native UI) ---
   (enable-recursive-minibuffers t)
   (completion-cycle-threshold 1)
   (completions-detailed t)
   (tab-always-indent 'complete)
-
-  ;; Native completion UI settings (Relevant if not using Vertico)
-  (completion-auto-help 'always)
-  (completions-max-height 20)
-  (completions-format 'one-column)
-  (completions-group t)
-  (completion-auto-select 'second-tab)
 
   ;; --- Visual Tweaks ---
   (x-underline-at-descent-line nil)
@@ -153,12 +146,12 @@
   (python-base-mode . eglot-ensure)
 
   :config
-  (fset #'jsonrpc--log-event #'ignore) ; massive perf boost---don't log every event
   ;; Sometimes you need to tell Eglot where to find the language server
   ;; (add-to-list 'eglot-server-programs
   ;;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
 
   :custom
+  (eglot-events-buffer-size 0)          ; don't log every JSON-RPC event
   (eglot-extend-to-xref t)             ; activate Eglot in referenced non-project files
   (eglot-send-changes-idle-time 0.1))
 

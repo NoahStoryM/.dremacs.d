@@ -34,9 +34,11 @@
   ;; Make dired-omit-mode hide all "dotfiles"
   (dired-omit-files (concat dired-omit-files "\\|^\\..*$")))
 
+;; `dired-du-mode' runs du recursively on every listed directory, which is
+;; slow on large trees and overlaps with dirvish's `file-size'.  Toggle it
+;; with M-x dired-du-mode when needed.
 (use-package dired-du
-  :hook
-  (dired-mode . dired-du-mode))
+  :commands dired-du-mode)
 
 ;; (use-package diredfl
 ;;   :hook

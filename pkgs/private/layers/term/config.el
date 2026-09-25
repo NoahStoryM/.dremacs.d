@@ -1,14 +1,11 @@
 ;; -*- lexical-binding: t -*-
 
-(meta-import (private layers term packages)
-             (private layers term utils))
+(meta-import (private layers term packages))
 
 (use-package eshell
   :defer t
   :custom
-  (eshell-hist-ignoredups t)
-  :hook
-  ((eshell-mode . private-setup-eshell)))
+  (eshell-hist-ignoredups t))
 
 (use-package eshell-syntax-highlighting
   :after eshell

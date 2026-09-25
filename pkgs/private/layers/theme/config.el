@@ -4,7 +4,7 @@
   :demand t
   :config
   (let ((theme 'spacemacs-light))
-    (spacemacs-theme-custom-colors theme)
+    (private-spacemacs-theme-custom-colors theme)
     (load-theme theme t)))
 
 (use-package rainbow-delimiters

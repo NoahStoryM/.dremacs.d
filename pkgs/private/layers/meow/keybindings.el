@@ -4,7 +4,7 @@
 
 (use-package meow
   :init
-  (defun meow-setup-default ()
+  (defun private-meow-setup-default ()
     "Official Meow QWERTY layout."
     (meow-leader-define-key
      ;; Use SPC (0-9) for digit arguments.
@@ -90,7 +90,7 @@
      'insert
      '("C-z" . meow-insert-exit)))
 
-  (defun meow-setup-private ()
+  (defun private-meow-setup ()
     "Private Meow qwerty layout."
     (meow-leader-define-key
      ;; Use SPC (0-9) for digit arguments.
@@ -209,8 +209,7 @@
      '("M-m" . meow-keypad)
      '("C-SPC" . meow-insert-exit)))
 
-  (defalias 'meow-setup #'meow-setup-private)
   :config
-  (meow-setup))
+  (private-meow-setup))
 
 (meta-export (private layers meow keybindings))
