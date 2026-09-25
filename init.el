@@ -4,8 +4,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (unless package-archive-contents (package-read-all-archive-contents))
 
-(setq user-emacs-directory (file-name-concat user-emacs-directory ".local/"))
-(make-directory user-emacs-directory t)
+;; `user-emacs-directory' already points to `.local/' (see early-init.el).
 (setopt custom-file (file-name-concat user-emacs-directory "custom.el"))
 (load custom-file t)
 
@@ -13,4 +12,7 @@
   (meta-install-scope "user" scope-path))
 (meta-import (private))
 
-(setopt gc-cons-threshold (or private--initial-gc-threshold 800000))
+;; Restore a GC threshold that still suits LSP/completion workloads; the
+;; stock 800KB triggers frequent collections with eglot and corfu.
+(add-hook 'emacs-startup-hook
+          (lambda () (setq gc-cons-threshold (* 16 1024 1024))))

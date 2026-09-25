@@ -34,6 +34,9 @@
   (sentence-end-double-space nil)
   (text-mode-ispell-word-completion nil)
 
+  ;; --- Subprocesses (eglot reads large JSON payloads) ---
+  (read-process-output-max (* 1024 1024))
+
   ;; --- Backup Configuration ---
   (make-backup-file-name-function 'private--backup-file-name)
 
