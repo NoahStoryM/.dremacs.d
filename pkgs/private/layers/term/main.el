@@ -3,5 +3,3 @@
 (meta-import (private layers term packages)
              (private layers term config)
              (private layers term keybindings))
-
-(meta-export (private layers term))

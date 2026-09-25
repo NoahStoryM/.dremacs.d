@@ -9,5 +9,3 @@
 (use-package vertico-directory
   :ensure nil
   :after vertico)
-
-(meta-export (private packages vertico))

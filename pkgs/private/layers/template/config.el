@@ -8,5 +8,3 @@
   ;; Put tempel-expand on the list whenever you start programming or
   ;; writing prose.
   ((text-mode prog-mode) . private-tempel-setup-capf))
-
-(meta-export (private layers template config))

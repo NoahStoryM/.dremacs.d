@@ -10,5 +10,3 @@
    ([remap describe-command]  . helpful-command)
    ([remap describe-function] . helpful-callable)
    ([remap describe-variable] . helpful-variable)))
-
-(meta-export (private packages helpful))

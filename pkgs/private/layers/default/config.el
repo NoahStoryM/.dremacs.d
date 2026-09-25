@@ -154,5 +154,3 @@
   (eglot-events-buffer-size 0)          ; don't log every JSON-RPC event
   (eglot-extend-to-xref t)             ; activate Eglot in referenced non-project files
   (eglot-send-changes-idle-time 0.1))
-
-(meta-export (private layers default config))

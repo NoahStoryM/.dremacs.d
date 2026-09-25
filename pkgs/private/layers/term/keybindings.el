@@ -16,5 +16,3 @@
   (:map
    capf-autosuggest-active-mode-map
    ("<tab>" . capf-autosuggest-accept)))
-
-(meta-export (private layers term keybindings))

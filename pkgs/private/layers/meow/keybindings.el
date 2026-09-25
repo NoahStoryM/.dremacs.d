@@ -211,5 +211,3 @@
 
   :config
   (private-meow-setup))
-
-(meta-export (private layers meow keybindings))

@@ -27,5 +27,3 @@
    ("<mouse-1>" . dirvish-subtree-toggle-or-open)
    ("<mouse-2>" . dired-mouse-find-file-other-window)
    ("<mouse-3>" . dired-mouse-find-file)))
-
-(meta-export (private layers dir keybindings))

@@ -23,5 +23,3 @@
   (corfu-popupinfo-hide nil)
   :config
   (corfu-popupinfo-mode))
-
-(meta-export (private packages corfu))

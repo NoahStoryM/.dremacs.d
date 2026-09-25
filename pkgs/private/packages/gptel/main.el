@@ -16,5 +16,3 @@
        (text-mode . "## assistant\n")))
   :hook
   (gptel-post-stream . gptel-auto-scroll))
-
-(meta-export (private packages gptel))

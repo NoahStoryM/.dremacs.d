@@ -5,5 +5,3 @@
   :defer t
   :custom
   (markdown-fontify-code-blocks-natively t))
-
-(meta-export (private packages markdown mode))

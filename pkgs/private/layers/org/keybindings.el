@@ -5,5 +5,3 @@
 (use-package org
   :bind
   ("C-c a" . org-agenda))
-
-(meta-export (private layers org keybindings))

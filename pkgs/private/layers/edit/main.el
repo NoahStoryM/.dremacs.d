@@ -3,5 +3,3 @@
 (meta-import (private layers edit packages)
              (private layers edit config)
              (private layers edit keybindings))
-
-(meta-export (private layers edit))

@@ -27,5 +27,3 @@
    ("j" . magit-section-backward)
    ("p" . magit-jump-to-diffstat-or-diff)
    ("n" . magit-log)))
-
-(meta-export (private layers git keybindings))

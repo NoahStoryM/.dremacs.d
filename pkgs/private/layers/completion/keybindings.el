@@ -22,5 +22,3 @@
   (:map
    vertico-map
    ("C-k" . vertico-directory-delete-word)))
-
-(meta-export (private layers completion keybindings))

@@ -11,5 +11,3 @@
   :after pyim
   :config
   (pyim-basedict-enable))
-
-(meta-export (private layers pyim config))

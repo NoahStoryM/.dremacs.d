@@ -32,5 +32,3 @@
   :hook (prog-mode text-mode)
   :config
   (require 'smartparens-config))
-
-(meta-export (private layers edit config))

@@ -6,5 +6,3 @@
   :demand t
   :config
   (meow-global-mode 1))
-
-(meta-export (private layers meow config))

@@ -43,5 +43,3 @@
 ;; (use-package geiser-stklos
 ;;   :ensure t
 ;;   :defer t)
-
-(meta-export (private packages geiser))

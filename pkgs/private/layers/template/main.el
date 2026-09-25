@@ -4,5 +4,3 @@
              (private layers template utils)
              (private layers template config)
              (private layers template keybindings))
-
-(meta-export (private layers template))

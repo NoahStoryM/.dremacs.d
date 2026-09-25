@@ -91,5 +91,3 @@
   ("M-k" . windmove-down)
   ("M-j" . windmove-left)
   ("M-l" . windmove-right))
-
-(meta-export (private layers default keybindings))

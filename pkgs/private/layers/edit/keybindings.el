@@ -32,5 +32,3 @@
   :demand t
   :bind
   (("C-." . embark-act)))               ; embark's suggested key; frees C-c a for org-agenda
-
-(meta-export (private layers edit keybindings))

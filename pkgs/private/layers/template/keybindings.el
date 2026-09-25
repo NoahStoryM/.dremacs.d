@@ -11,5 +11,3 @@
    ("C-k" . tempel-done)
    ("C-l" . tempel-next)
    ("C-j" . tempel-previous)))
-
-(meta-export (private layers template keybindings))

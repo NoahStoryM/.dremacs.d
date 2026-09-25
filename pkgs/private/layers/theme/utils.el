@@ -21,5 +21,3 @@
      (comment-light . ,(if (eq theme 'spacemacs-dark) (if (private-true-color-p) "#2ca6b3" "#008787") (if (private-true-color-p) "#a49da5" "#008787")))
      (comment-bg    . ,(if (eq theme 'spacemacs-dark) (if (private-true-color-p) "#262c36" "#262626") (if (private-true-color-p) "#fdf3dc" "#ffffff")))
      )))
-
-(meta-export (private layers theme utils))

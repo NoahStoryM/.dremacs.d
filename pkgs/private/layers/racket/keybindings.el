@@ -9,5 +9,3 @@
    ("C-c C-c" . racket-run)
    ("C-c C-z" . racket-repl)
    ("C-c C-d" . racket-doc)))
-
-(meta-export (private layers racket keybindings))

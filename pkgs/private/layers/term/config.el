@@ -20,5 +20,3 @@
   :config
   (eat-eshell-mode)                 ; use Eat to handle term codes in program output
   (eat-eshell-visual-command-mode)) ; commands like less will be handled by Eat
-
-(meta-export (private layers term config))

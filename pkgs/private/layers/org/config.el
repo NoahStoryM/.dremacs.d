@@ -5,5 +5,3 @@
 (use-package toc-org
   :hook
   (org-mode . toc-org-mode))
-
-(meta-export (private layers org config))

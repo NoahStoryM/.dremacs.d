@@ -1,8 +1,6 @@
-;;; meta.el --- Private package metadata -*- lexical-binding: t -*-
+;;; metadata.el --- Private package metadata  -*- mode: lisp-data -*-
 
-(definfo private-pkg-info
-  (list :license 'GPL-3.0-or-later
-        :collection "private"
-        :pkg-desc "User private package"
-        :deps '("meta"))
-  "Metadata for the `private' collection system.")
+(:license GPL-3.0-or-later
+ :collection "private"
+ :pkg-desc "User private package"
+ :deps ("meta"))

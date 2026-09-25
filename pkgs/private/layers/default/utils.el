@@ -26,5 +26,3 @@
                    (seq-every-p #'treesit-language-available-p langs))
           (push (cons mode ts-mode) alist)))
       (nreverse alist))))
-
-(meta-export (private layers default utils))

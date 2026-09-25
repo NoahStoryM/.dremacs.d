@@ -5,5 +5,3 @@
   :defer t
   :custom
   (wgrep-auto-save-buffer t))
-
-(meta-export (private packages wgrep))

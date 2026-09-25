@@ -8,5 +8,3 @@
   (pyim-page-style 'vertical)
   :config
   (pyim-default-scheme 'guobiao-shuangpin))
-
-(meta-export (private packages pyim))

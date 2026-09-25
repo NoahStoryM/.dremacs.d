@@ -14,5 +14,3 @@
   (setq meow-cursor-type-normal 'hollow)
   (setq meow-cursor-type-motion 'hollow)
   (setq meow-cursor-type-keypad 'box))
-
-(meta-export (private packages meow))
