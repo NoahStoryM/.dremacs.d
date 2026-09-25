@@ -31,7 +31,6 @@
 (use-package embark
   :demand t
   :bind
-  (("C-c a" . embark-act))             ; bind this to an easy key to hit
-  )
+  (("C-." . embark-act)))               ; embark's suggested key; frees C-c a for org-agenda
 
 (meta-export (private layers edit keybindings))
