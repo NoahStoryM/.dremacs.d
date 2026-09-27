@@ -10,6 +10,24 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (unless package-archive-contents (package-read-all-archive-contents))
 
+;; `:ensure t' asks package.el whether a package is installed.  Packages
+;; installed by Guix (or any other way) live outside package.el, and it
+;; does not always know them: Guix ships `embark-consult' inside
+;; emacs-embark, for example.  Treat anything already on `load-path' as
+;; installed, so package.el only downloads what is really missing.
+(defun private-use-package-ensure (name args state &optional no-refresh)
+  "Like `use-package-ensure-elpa', but skip packages already on `load-path'."
+  (let ((missing
+         (seq-remove (lambda (ensure)
+                       (let ((package (cond ((eq ensure t) (use-package-as-symbol name))
+                                            ((consp ensure) (car ensure))
+                                            (t ensure))))
+                         (and package (locate-library (symbol-name package)))))
+                     args)))
+    (when missing
+      (use-package-ensure-elpa name missing state no-refresh))))
+(setq use-package-ensure-function #'private-use-package-ensure)
+
 ;; `user-emacs-directory' already points to `.local/' (see early-init.el).
 (setopt custom-file (file-name-concat user-emacs-directory "custom.el"))
 (load custom-file t)
