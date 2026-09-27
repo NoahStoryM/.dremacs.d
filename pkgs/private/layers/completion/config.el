@@ -20,11 +20,6 @@
   :init
   (global-corfu-mode))
 
-(use-package corfu-terminal
-  :if (not (display-graphic-p))
-  :config
-  (corfu-terminal-mode))
-
 (use-package kind-icon
   :if (display-graphic-p)
   :after corfu

@@ -1,5 +1,11 @@
 ;;; init.el --- User Initialization File -*- lexical-binding: t -*-
 
+;; This configuration targets Emacs 31 (the DrEmacs framework itself only
+;; needs 29).  It relies on `which-key' being built in (30) and on child
+;; frames in terminal Emacs for Corfu popups (31).
+(when (< emacs-major-version 31)
+  (display-warning 'dremacs "This configuration targets Emacs 31 or newer"))
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (unless package-archive-contents (package-read-all-archive-contents))

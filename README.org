@@ -1,6 +1,9 @@
 #+AUTHOR: Noah Ma
 #+EMAIL: noahstorym@gmail.com
 
+* Requirements
+GNU Emacs 31 or newer.
+
 * Install
 You can use my configuration by two steps:
 
