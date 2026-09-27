@@ -1,5 +1,0 @@
-;; -*- lexical-binding: t -*-
-
-(meta-import (private layers git packages)
-             (private layers git config)
-             (private layers git keybindings))

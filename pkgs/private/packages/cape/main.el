@@ -1,5 +1,0 @@
-;; -*- lexical-binding: t -*-
-
-(use-package cape
-  :ensure t
-  :defer t)
