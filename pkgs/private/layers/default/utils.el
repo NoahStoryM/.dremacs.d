@@ -20,6 +20,10 @@
 (defun private--treesit-remap-alist ()
   "Return `major-mode-remap-alist' entries whose ts-mode can actually run."
   (when (and (fboundp 'treesit-available-p) (treesit-available-p))
+    ;; `treesit-language-available-p' is a primitive and does not load
+    ;; treesit.el, but Guix adds its grammar directory to
+    ;; `treesit-extra-load-path' only once treesit.el loads.
+    (require 'treesit)
     (let (alist)
       (pcase-dolist (`(,mode ,ts-mode . ,langs) private--treesit-remaps)
         (when (and (fboundp ts-mode)

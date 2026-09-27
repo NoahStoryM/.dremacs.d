@@ -132,6 +132,12 @@
 
 (use-package tab-bar
   :custom
+  ;; Since Emacs 31, turning on `tab-bar-mode' (which `tab-bar-show' does
+  ;; right here, before keybindings.el runs) binds C-TAB and C-S-TAB in
+  ;; `tab-bar-mode-map'.  Those shadow the global C-<tab> input-method
+  ;; toggle and magit's C-S-TAB.  Emacs 30 checked for a global binding
+  ;; at key-press time instead.  Tabs are switched with M-u / M-o.
+  (tab-bar-define-keys nil)
   (tab-bar-show 1))
 
 (use-package tab-line
