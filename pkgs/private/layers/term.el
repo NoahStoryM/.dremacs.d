@@ -5,7 +5,11 @@
 (use-package eshell
   :defer t
   :custom
-  (eshell-hist-ignoredups t)
+  (eshell-hist-ignoredups t))
+
+;; `eshell-mode-map' is defined in esh-mode.el, which eshell.el does not
+;; load, so the bindings wait for esh-mode rather than eshell.
+(use-package esh-mode
   :bind
   (:map
    eshell-mode-map

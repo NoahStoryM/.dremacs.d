@@ -56,9 +56,10 @@
 
 (use-package dired-x
   :after dired
-  :custom
-  ;; Make dired-omit-mode hide all "dotfiles"
-  (dired-omit-files (concat dired-omit-files "\\|^\\..*$")))
+  :config
+  ;; Make dired-omit-mode hide all "dotfiles".  This refers to the default
+  ;; value, so it must run after dired-x loads, not as a `:custom'.
+  (setq dired-omit-files (concat dired-omit-files "\\|^\\..*$")))
 
 ;; `dired-du-mode' runs du recursively on every listed directory, which is
 ;; slow on large trees and overlaps with dirvish's `file-size'.  Toggle it
