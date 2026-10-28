@@ -30,6 +30,7 @@
   (inhibit-splash-screen t)
   (initial-scratch-message nil)
   (display-time-default-load-average nil)
+  (fill-column 80)
   (sentence-end-double-space nil)
   (text-mode-ispell-word-completion nil)
 
