@@ -61,6 +61,8 @@ fundamental-mode
 (exists "∃")
 (union "∪")
 (intersection "∩")
+(coproduct "∐")
+(product "∏")
 (neg "¬")
 (bot "⊥")
 (top "⊤")
